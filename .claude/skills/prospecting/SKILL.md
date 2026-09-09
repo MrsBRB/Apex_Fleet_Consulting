@@ -12,7 +12,9 @@ starts **after** a lead already exists: something to route, a call to pack, a to
 referral that arrived. None of them describe how a prospect gets found in the first place. This
 skill is that missing layer.
 
-**This is a volume mandate, not a filter.** Apex wants any/all leads it can get. This skill's job
+**This is a volume mandate, not a filter, and it has no geographic limit.** Apex wants any/all
+leads it can get, anywhere — Apex is consulting/advisory, not tied to SVT's physical service
+centres, so it can pursue a fleet in any state. This skill's job
 is to maximize the number of real prospects entering the front door with clean, honest information
 attached — not to pre-judge fit, not to decide Apex vs. SVT, and not to talk anyone out of being
 worth a look. Whether a lead is Apex's, SVT's, both (Hybrid), needs a human (Review), or genuinely
@@ -43,17 +45,19 @@ the benchmark library, the booking page config — is in
 
 ---
 
-## 1. Where to look (wide net, not a narrow ICP)
+## 1. Where to look (wide net, no geographic limit)
 
-There is no hard qualifying bar here. Any commercial fleet, any industry, any size, in or out of
-the built estate (CA/NV/AZ + Greater Phoenix/Northern California mobile) is worth capturing. Use
-fit signals to **prioritize sequencing**, never to **exclude**:
+There is no hard qualifying bar here, and — per Brooke — **no geographic limit either.** Any
+commercial fleet, any industry, any size, anywhere, is worth capturing. The CA/NV/AZ + Greater
+Phoenix/Northern California footprint is an **SVT** constraint (SVT does on-site/mobile physical
+maintenance out of fixed service centres). Apex is consulting/advisory — it has no shop to be
+within driving distance of, so it carries no such limit. Don't inherit SVT's footprint thinking when
+sourcing for Apex. That footprint still matters later, at the routing stage (§10/`lead-routing`),
+because it's one of the signals that decides whether a lead *could* also be SVT's — but it should
+never stop Apex from pursuing a lead in the first place.
 
-- **Sourced in-footprint first** (CA/NV/AZ + Phoenix/N. CA mobile) — reachable faster, and
-  first-account wins open a market ("go wide before deep," §5).
-- **Out-of-footprint leads still get captured**, not dropped — they feed the expansion pipeline
-  (Dallas, Michigan, Northeast are named growth targets) even if they can't be served today. Log
-  them; just don't promise service Apex can't currently deliver (see §6 guardrails).
+Use fit signals to **prioritize sequencing**, never to **exclude**:
+
 - **Amazon DSPs** are a real source but capture at the **station or multi-DSP-operator level**, not
   as individual 20–40-van routes — that's how the DSP/Uptech side of the business already thinks
   about volume, and it's more efficient sourcing regardless of which way a lead eventually routes.
@@ -67,23 +71,26 @@ fit signals to **prioritize sequencing**, never to **exclude**:
 ### Sourcing channels
 1. **`07 Prospect Research`** — check first for anything already sourced before treating a lead as
    net-new.
-2. **Amazon DSP station clustering** — San Diego, Las Vegas, and Fremont are named priorities.
-3. **Local commercial fleets in-footprint** — chamber of commerce lists, DOT/FMCSA carrier
-   registries, LinkedIn company/title search (fleet manager, operations manager, maintenance
-   director) at companies with visible vehicle fleets (delivery, service, construction, waste,
-   utility, last-mile).
-4. **Broader/out-of-footprint sourcing** — same methods, wider geography, for the expansion
-   pipeline. Don't let footprint be a reason to stop sourcing; let it only affect priority order.
-5. **Referral partner network**, once `partner-referrals` is live with real partners — those
+2. **Amazon DSP station clustering** — San Diego, Las Vegas, and Fremont are named priorities, but
+   this is one channel among many, not the whole map — DSP stations exist nationwide.
+3. **Commercial fleets, nationwide** — chamber of commerce lists, DOT/FMCSA carrier registries,
+   LinkedIn company/title search (fleet manager, operations manager, maintenance director) at
+   companies with visible vehicle fleets (delivery, service, construction, waste, utility,
+   last-mile), with no geographic restriction (§1).
+4. **Referral partner network**, once `partner-referrals` is live with real partners — those
    arrive already partner-attributed; route them through `partner-referrals`, not this skill's cold
    path.
-6. **Warm re-engagement** — check the Outreach Log for anything DORMANT 30+ days before treating a
+5. **Warm re-engagement** — check the Outreach Log for anything DORMANT 30+ days before treating a
    market as fully cold.
+6. **Existing pipeline items awaiting a cadence** — e.g. a Pipeline Tracker/Send Log or a named
+   target wave (Symphony flagged one covering Sherwin-Williams, Spire, and PepsiCo) can already sit
+   uncommitted in the pipeline from earlier work. Fold anything like that into the active cadence
+   rather than starting a second, competing list.
 
-Any of these can be handed to a Symphony agent as a standing task ("build a list of commercial
-fleets with any vehicles operating out of San Diego, Las Vegas, or Fremont," or "find fleet managers
-at last-mile delivery companies anywhere reachable"). Cast wide; the qualification pass in §2 is
-what turns a raw list into loggable leads, not a fitness test.
+Any of these can be handed to a Symphony agent as a standing task ("find fleet managers at
+last-mile delivery companies anywhere reachable," or "build a target list from DSP stations
+nationwide"). Cast wide, with no geography excluded; the qualification pass in §2 is what turns a
+raw list into loggable leads, not a fitness test.
 
 ---
 
@@ -169,8 +176,10 @@ before deep, especially at the priority DSP stations (San Diego, Las Vegas, Frem
   nothing. A number that can't be sourced is a number a fleet director will ask to be sourced.
 - **Never name a toll, citation, or parking vendor** — including Uptech — in any Apex-branded
   conversation.
-- **Never claim coverage outside CA/NV/AZ + Greater Phoenix/Northern California mobile.** Capture
-  out-of-footprint leads freely (§1); just don't promise service there.
+- **Apex has no service-area limit — pursue any fleet, anywhere (§1).** The CA/NV/AZ + Greater
+  Phoenix/Northern California footprint is SVT's constraint, not Apex's. Never imply SVT's
+  on-site/mobile maintenance is available outside that footprint, but never let it limit what Apex
+  itself will pursue or claim to deliver.
 - **Never register or pitch an individual Amazon DSP van route in isolation** — station or
   multi-DSP-operator level only.
 - **One brand per conversation** — a prospect hears from SVT or Apex, never both in the same
