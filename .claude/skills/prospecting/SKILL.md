@@ -130,18 +130,25 @@ which business will be handling them until that's actually decided.
 
 ---
 
-## 3. Outreach cadence
+## 3. Outreach cadence — email-led via Apollo.io
 
-No cadence, script, or template existed before this — treat the sequence below as a starting point
-to adjust after a few weeks of real response data, not a fixed rule:
+**Per Brooke: email is the primary channel, not LinkedIn — sent and tracked through Apollo.io** so
+open/click/reply data is measurable, not guessed at. Run the sequence as an Apollo sequence against
+`brooke@apexfleetconsulting.com` rather than one-off manual sends. Treat the timing below as a
+starting point to adjust after a few weeks of real Apollo data, not a fixed rule:
 
 | Touch | Timing | Channel | Goal |
 |---|---|---|---|
-| 1 | Day 0 | Email | Introduce Apex, ask the 3 screening questions, no pitch |
-| 2 | Day 3–4 | LinkedIn | Connect + one-line reference to the email |
+| 1 | Day 0 | Email (Apollo) | Introduce Apex, ask the 3 screening questions, no pitch |
+| 2 | Day 3–4 | Email (Apollo) | Different angle — lead with the service-need hypothesis from §2 |
 | 3 | Day 7 | Call | Attempt live contact; leave a specific voicemail referencing touch 1 |
-| 4 | Day 12 | Email | Different angle — lead with the service-need hypothesis from §2 |
-| 5 | Day 20 | Call or LinkedIn | Final attempt before marking DORMANT |
+| 4 | Day 12 | Email (Apollo) | Third angle — reference the benchmark library (`references/inbound-
+assessment-routing.md`), never an invented stat |
+| 5 | Day 20 | Email (Apollo) or Call | Final attempt before marking DORMANT |
+
+LinkedIn drops out of the standard sequence. It's still fair game as a one-off supplemental touch
+on a specific high-value account (e.g. the top-tier prospect wave), but it is no longer a scheduled
+step — email is, because it's the channel we can actually measure.
 
 **Every touch's call-to-action should point at the existing front door, not a bespoke ask:** the
 Fleet Maintenance Exposure Assessment link (self-serve, scores itself, triggers the day-one reply)
@@ -150,8 +157,16 @@ or, once someone's warm enough to want a conversation, the live booking page —
 separate scheduling process; both of these already run the prospect through `lead-routing` and land
 them in the trackers (§10).
 
-Channel values must match the Outreach Log's dropdown exactly: **Email, Call, LinkedIn, Web form,
-Meeting, Text, In person, Other.**
+**Logging now inherits Apollo's tracked outcome, not a guess.** The Outreach Log's Outcome dropdown
+already anticipates this — **Sent · Landed · Opened · Clicked · Replied · No reply · Bounced · Dead
+channel · Declined · Meeting held · Cancelled · No contact made** — so record whatever Apollo
+actually reports for that send, not just "Sent." Channel values must otherwise still match the
+dropdown exactly: **Email, Call, LinkedIn, Web form, Meeting, Text, In person, Other.**
+
+**Deliverability/compliance, since this is now sequence-automated bulk email, not one-off manual
+sends:** every send needs a working unsubscribe/opt-out, a real reply-to, and sending volume/warm-up
+limits respected on the `apexfleetconsulting.com` domain — a spam-complaint spike or a blocked
+domain costs every future send, not just one prospect.
 
 No response after touch 5 → mark **DORMANT**, not silence. Per the Friday audit, DORMANT gets
 revived with a specific action or marked dead after 30 days.
@@ -253,8 +268,8 @@ before deep, especially at the priority DSP stations (San Diego, Las Vegas, Frem
 
 - **Scout** — sourcing (§1) and minimal qualification (§2); hands off a lead list with whatever
   intake data is known.
-- **Outreach** — runs the §3 cadence, sends touches, logs every one (§6), halts on any compliance
-  flag.
+- **Outreach** — runs the §3 cadence as an Apollo.io sequence, logs every touch with Apollo's actual
+  tracked outcome (§6), halts on any compliance flag.
 - **Scheduler** — confirms discovery calls once a lead is responsive and routed (or under REVIEW),
   triggers `lead-packet`, runs the three manual steps in §10 for any cold booking that bypassed the
   assessment, owns the weekly report (§8).
