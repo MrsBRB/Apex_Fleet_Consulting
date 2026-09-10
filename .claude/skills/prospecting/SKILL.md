@@ -184,11 +184,16 @@ before deep, especially at the priority DSP stations (San Diego, Las Vegas, Frem
 
 ## 5. Guardrails — hard do-nots for any Symphony prospecting agent
 
-- **Never quote a fee, fee range, or dollar figure** to a prospect. No calculator exists for two of
-  the six Apex service lines, and every published floor is for the proposal stage, not first touch.
+- **Never quote a fee, fee range, or dollar figure that isn't already public.** Internal fee floors
+  and per-scope pricing from the fee-sizing tables are for the proposal stage, not first touch, and
+  must never be stated to an unscoped prospect. The one exception: the "$150K–$400K typical annual
+  savings on a $25K engagement" headline stat is Apex's own published marketing claim on
+  apexfleetconsulting.com — safe to cite as-is since any prospect could see it on the site, but never
+  dressed up as a personalized quote for that specific prospect's situation.
 - **Never cite a statistic that isn't in the benchmark library** (`references/inbound-assessment-
-  routing.md`). Every published figure there comes from Apex's own whitepaper — cite those, invent
-  nothing. A number that can't be sourced is a number a fleet director will ask to be sourced.
+  routing.md`, including its website-headline-stats section). Every figure there is either from
+  Apex's own whitepaper or its public site — cite those, invent nothing. A number that can't be
+  sourced is a number a fleet director will ask to be sourced.
 - **Never name a toll, citation, or parking vendor** — including Uptech — in any Apex-branded
   conversation.
 - **Apex has no service-area limit — pursue any fleet, anywhere (§1).** The CA/NV/AZ + Greater

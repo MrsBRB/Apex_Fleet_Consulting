@@ -197,7 +197,20 @@ six of seven answered No or Not sure.
 > Apex Fleet Consulting
 > Independent. Experienced. Results-focused.
 
-### The benchmark library
+### Website headline stats (apexfleetconsulting.com — "The Apex Difference" / "What Clients Commonly Achieve")
+
+These are public marketing claims on the Apex site itself, safe to cite in outreach since a
+prospect could see them by visiting the site:
+
+- **$150K–$400K** — "the typical annual savings our clients achieve — on a $25K engagement."
+  "Most clients recover the full engagement fee within 90 days."
+- **5–15%** reduction in total maintenance costs.
+- Reduced breakdown and emergency repair frequency (no percentage published).
+- Improved PM compliance rates across locations (no percentage published).
+- **90 days** — typical timeline to recover the engagement fee through savings.
+- Full visibility into fleet spend and vendor performance (qualitative claim, no number).
+
+### The benchmark library (whitepaper-sourced, used for scored post-assessment replies)
 
 Every figure below is already published in Apex's own whitepaper. **Cite these; invent nothing.** A
 number that can't be sourced is a number a fleet director will ask to be sourced.
