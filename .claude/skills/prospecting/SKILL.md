@@ -168,6 +168,16 @@ sends:** every send needs a working unsubscribe/opt-out, a real reply-to, and se
 limits respected on the `apexfleetconsulting.com` domain — a spam-complaint spike or a blocked
 domain costs every future send, not just one prospect.
 
+**Domain authentication — completed 2026-09-14.** `apexfleetconsulting.com`'s DMARC record was
+previously delegated via CNAME to Wix's hosted default (`p=none`, relaxed alignment, aggregate and
+forensic reports routed to third-party addresses Brooke didn't control). That CNAME was removed and
+replaced with a direct TXT record: `p=quarantine` (or `p=reject`, per Brooke's final choice),
+`adkim=s`/`aspf=s` (strict alignment), reports routed to `brooke@apexfleetconsulting.com`. SPF and
+DKIM were already passing independently of this change. If Apollo's domain-authentication check or
+deliverability still looks off after this, re-verify the record actually propagated (`_dmarc.
+apexfleetconsulting.com` should resolve directly now, not via CNAME) before assuming something else
+is wrong.
+
 No response after touch 5 → mark **DORMANT**, not silence. Per the Friday audit, DORMANT gets
 revived with a specific action or marked dead after 30 days.
 
