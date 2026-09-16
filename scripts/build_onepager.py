@@ -57,7 +57,7 @@ c.drawString(MARGIN, PAGE_H - 0.52*inch, "APEX FLEET CONSULTING")
 
 c.setFont("Helvetica", 11.5)
 c.setFillColor(HexColor("#CBD8E6"))
-c.drawString(MARGIN, PAGE_H - 0.78*inch, "Independent Fleet Maintenance Consulting for Mid-Sized Commercial Fleets")
+c.drawString(MARGIN, PAGE_H - 0.78*inch, "Independent Fleet Maintenance Consulting for Commercial Fleets")
 
 c.setFont("Helvetica", 9)
 c.setFillColor(HexColor("#9FB3C8"))
@@ -69,7 +69,7 @@ c.drawString(MARGIN, PAGE_H - 1.00*inch, contact)
 # =========================================================
 y = PAGE_H - HEADER_H - 0.24*inch
 intro = ('<font color="#0E2340"><b>Operators, not advisors.</b></font> '
-         '<font color="#3C4C5C">We work exclusively with fleets running 50&#8211;500 vehicles, delivering '
+         '<font color="#3C4C5C">We work with commercial fleets of all sizes, delivering '
          'operational playbooks &#8212; not strategy decks &#8212; with any conflicts disclosed in writing.</font>')
 h = para(intro, dict(fontName="Helvetica", fontSize=10.5, leading=14.5, alignment=TA_LEFT), CONTENT_W, MARGIN, y)
 y -= h + 0.30*inch
@@ -197,7 +197,7 @@ y = phase_top - 1.15*inch
 # =========================================================
 y = section_heading("WHO THIS IS FOR", y)
 who = ('<font color="#3C4C5C">Fleet managers, directors of maintenance, and VPs of operations running '
-       '<b>50&#8211;500 vehicles</b> across logistics &amp; delivery, construction &amp; transport, HVAC/plumbing/electrical, '
+       '<b>commercial fleets of any size</b> across logistics &amp; delivery, construction &amp; transport, HVAC/plumbing/electrical, '
        'and utility/energy fleets &#8212; facing high maintenance costs, unpredictable downtime, low PM compliance, '
        'or vendor pricing with no benchmark.</font>')
 h = para(who, dict(fontName="Helvetica", fontSize=9.2, leading=13.2, alignment=TA_LEFT), CONTENT_W, MARGIN, y)
