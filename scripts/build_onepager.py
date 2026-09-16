@@ -61,7 +61,7 @@ c.drawString(MARGIN, PAGE_H - 0.78*inch, "Independent Fleet Maintenance Consulti
 
 c.setFont("Helvetica", 9)
 c.setFillColor(HexColor("#9FB3C8"))
-contact = "brooke@apexfleetconsulting.com      701-997-2739      www.apexfleetconsulting.com"
+contact = "info@apexfleetconsulting.com      701-997-2739      www.apexfleetconsulting.com"
 c.drawString(MARGIN, PAGE_H - 1.00*inch, contact)
 
 # =========================================================
@@ -225,7 +225,7 @@ c.drawString(MARGIN, FOOTER_H-0.78*inch, "outlook.office.com/book/ApexFleetConsu
 
 c.setFont("Helvetica", 8.3)
 c.setFillColor(HexColor("#9FB3C8"))
-c.drawRightString(PAGE_W-MARGIN, FOOTER_H-0.60*inch, "brooke@apexfleetconsulting.com")
+c.drawRightString(PAGE_W-MARGIN, FOOTER_H-0.60*inch, "info@apexfleetconsulting.com")
 c.drawRightString(PAGE_W-MARGIN, FOOTER_H-0.76*inch, "701-997-2739  ·  www.apexfleetconsulting.com")
 
 c.showPage()
