@@ -212,21 +212,51 @@ c.rect(0, 0, PAGE_W, FOOTER_H, stroke=0, fill=1)
 c.setFillColor(ACCENT)
 c.rect(0, FOOTER_H-3, PAGE_W, 3, stroke=0, fill=1)
 
+BOOKING_URL = "https://outlook.office.com/book/ApexFleetConsulting2@apexfleetconsulting.com/"
+WEBSITE_URL = "https://www.apexfleetconsulting.com"
+EMAIL_ADDR = "info@apexfleetconsulting.com"
+
 c.setFillColor(WHITE)
 c.setFont("Helvetica-Bold", 13)
 c.drawString(MARGIN, FOOTER_H-0.34*inch, "Ready to see what's recoverable in your fleet?")
 
+# --- clickable booking CTA (bold line + subtext act as one link) ---
+cta_y_top = FOOTER_H-0.60*inch
+cta_y_bot = FOOTER_H-0.80*inch
 c.setFont("Helvetica-Bold", 10.5)
 c.setFillColor(ACCENT)
-c.drawString(MARGIN, FOOTER_H-0.60*inch, "Book a 30-Minute Discovery Call →")
-c.setFont("Helvetica", 9)
-c.setFillColor(HexColor("#CBD8E6"))
-c.drawString(MARGIN, FOOTER_H-0.78*inch, "outlook.office.com/book/ApexFleetConsulting2@apexfleetconsulting.com")
+cta_text = "Book a 30-Minute Discovery Call  →"
+c.drawString(MARGIN, cta_y_top, cta_text)
+cta_w = stringWidth(cta_text, "Helvetica-Bold", 10.5)
 
+c.setFont("Helvetica", 8.7)
+c.setFillColor(HexColor("#CBD8E6"))
+sub_text = "Click to schedule instantly online"
+c.drawString(MARGIN, cta_y_bot, sub_text)
+sub_w = stringWidth(sub_text, "Helvetica", 8.7)
+
+# single link rect spanning both lines for an easy click target
+c.linkURL(BOOKING_URL, (MARGIN-2, cta_y_bot-3, MARGIN+max(cta_w, sub_w)+4, cta_y_top+11),
+          relative=0, thickness=0)
+
+# --- clickable email + website, right-aligned ---
 c.setFont("Helvetica", 8.3)
 c.setFillColor(HexColor("#9FB3C8"))
-c.drawRightString(PAGE_W-MARGIN, FOOTER_H-0.60*inch, "info@apexfleetconsulting.com")
-c.drawRightString(PAGE_W-MARGIN, FOOTER_H-0.76*inch, "701-997-2739  ·  www.apexfleetconsulting.com")
+email_y = FOOTER_H-0.60*inch
+web_y = FOOTER_H-0.76*inch
+c.drawRightString(PAGE_W-MARGIN, email_y, EMAIL_ADDR)
+email_w = stringWidth(EMAIL_ADDR, "Helvetica", 8.3)
+c.linkURL(f"mailto:{EMAIL_ADDR}",
+          (PAGE_W-MARGIN-email_w-2, email_y-2, PAGE_W-MARGIN+2, email_y+9),
+          relative=0, thickness=0)
+
+phone_web = "701-997-2739  ·  www.apexfleetconsulting.com"
+c.drawRightString(PAGE_W-MARGIN, web_y, phone_web)
+web_label = "www.apexfleetconsulting.com"
+web_label_w = stringWidth(web_label, "Helvetica", 8.3)
+c.linkURL(WEBSITE_URL,
+          (PAGE_W-MARGIN-web_label_w-2, web_y-2, PAGE_W-MARGIN+2, web_y+9),
+          relative=0, thickness=0)
 
 c.showPage()
 c.save()
