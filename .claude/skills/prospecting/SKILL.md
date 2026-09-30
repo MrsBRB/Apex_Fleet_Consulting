@@ -188,6 +188,12 @@ fee/stat claims by reading the live touch content, not by memory of what was req
 `spam_block_rate`/`bounce_rate` against the sequence's own `auto_pause_config` thresholds before
 resuming.
 
+**Resolved 2026-09-30.** All four content fixes and the `manual_email` reversion were confirmed
+applied via direct re-read of the live sequence (not taken on a verbal "yes") — see the corrected
+prompts in this skill's history. The sequence remains `active: false` (`manual_pause`) pending a
+deliberate decision to resume; reactivating it, and clearing any bad addresses among the 6
+spam-blocked/7 bounced contacts before they could be re-enrolled, are still open.
+
 **Domain authentication — completed 2026-09-14.** `apexfleetconsulting.com`'s DMARC record was
 previously delegated via CNAME to Wix's hosted default (`p=none`, relaxed alignment, aggregate and
 forensic reports routed to third-party addresses Brooke didn't control). That CNAME was removed and
