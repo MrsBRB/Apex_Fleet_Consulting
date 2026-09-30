@@ -168,6 +168,26 @@ sends:** every send needs a working unsubscribe/opt-out, a real reply-to, and se
 limits respected on the `apexfleetconsulting.com` domain — a spam-complaint spike or a blocked
 domain costs every future send, not just one prospect.
 
+**Incident, 2026-09-29 — sequence paused after unfixed content sent live.** The fee-quoting/
+unsourced-stat fixes agreed for this sequence (§3) were never actually confirmed applied before
+Apollo's own `auto_email` step began sending automatically. By the time the live state was
+re-checked, 74 emails had delivered with the original flawed content, spam-block rate had reached
+7.4% (above the sequence's own 6.0% auto-pause threshold), and the sequence had been switched from
+`manual_email` (human approves each send) to `auto_email` (sends with no review) at some point
+without that change going through this framework. The sequence was manually paused in the Apollo UI
+once this was caught (`apollo_sequences_update`'s API path proved unreliable for both the content
+fix and the pause itself — manual UI action was what actually worked, twice).
+
+**Lesson: never treat a content fix or config change as done on a verbal "yes" — re-pull the live
+sequence state (`apollo_emailer_campaigns_show`) before treating any outstanding fix as resolved,**
+especially after any time gap or session boundary. Before reactivating this sequence, or any future
+one: (1) confirm every step's actual `type` — `auto_email` sends without human review, `manual_email`
+requires a click; changing an email step to `auto_email` is a real behavior change and should be
+called out explicitly if it happens; (2) re-verify AI-generation prompts don't contain unsourced
+fee/stat claims by reading the live touch content, not by memory of what was requested; (3) check
+`spam_block_rate`/`bounce_rate` against the sequence's own `auto_pause_config` thresholds before
+resuming.
+
 **Domain authentication — completed 2026-09-14.** `apexfleetconsulting.com`'s DMARC record was
 previously delegated via CNAME to Wix's hosted default (`p=none`, relaxed alignment, aggregate and
 forensic reports routed to third-party addresses Brooke didn't control). That CNAME was removed and
